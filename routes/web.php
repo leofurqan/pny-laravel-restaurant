@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +25,8 @@ Route::get('/contact', [WebsiteController::class, 'contact']);
 Route::get('/menu', [WebsiteController::class, 'menu']);
 
 Route::get('/booking', [WebsiteController::class, 'booking']);
+
+//Admin Routes
+Route::get('/admin/dashboard', [DashboardController::class, 'dashboard']);
+
+Route::get('/admin/settings', [SettingsController::class, 'settings']);
