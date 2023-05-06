@@ -11,21 +11,19 @@ class Input extends Component
     public $name;
     public $title;
     public $id;
-    public $inputType;
+    public $type;
     public $required;
-    public $darkmode;
 
     /**
      * Create a new component instance.
      */
-    public function __construct($name, $title, $id, $type, $required = 0, $darkmode = 0)
+    public function __construct($name, $title, $id, $type, $required = 0)
     {
         $this->name = $name;
         $this->title = $title;
         $this->id = $id;
-        $this->inputType = $type;
+        $this->type = $type;
         $this->required = $required;
-        $this->darkmode = $darkmode;
     }
 
     /**

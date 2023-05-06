@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="fw-bold py-3 mb-4">Settings</h4>
+    <h4 class="fw-bold py-3 mb-4">Add Service</h4>
 
     <div class="row">
         <div class="col-md-12">
@@ -17,7 +17,7 @@
             </div>
             @endif
 
-            <form method="post" action="{{url('/admin/settings')}}">
+            <form method="post" action="{{url('/admin/add-service')}}">
                 @csrf
                 <div class="card mb-4">
                     <h5 class="card-header">Website Settings</h5>
@@ -41,14 +41,10 @@
                         </div>
                     </div>
                     <hr class="my-0" />
-                    @php
-                        $darkmode = 1
-                    @endphp
                     <div class="card-body">
                         <div class="row">
-                            <x-input name="name" title="Name" id="name" type="text" />
-                            <x-input name="phone" title="Phone" id="phone" type="number" />
-                            <x-input name="email" title="Email" id="email" type="email"/>
+                            <x-input name="title" title="Name" id="name" type="text" />
+                            <x-input name="description" title="Description" id="description" type="text" />
                         </div>
                         <div class="mt-2">
                             <button type="submit" class="btn btn-primary me-2">Save changes</button>
