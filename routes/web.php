@@ -30,3 +30,5 @@ Route::get('/booking', [WebsiteController::class, 'booking']);
 Route::get('/admin/dashboard', [DashboardController::class, 'dashboard']);
 
 Route::get('/admin/settings', [SettingsController::class, 'settings']);
+
+Route::post('/admin/settings', [SettingsController::class, 'add_settings']);

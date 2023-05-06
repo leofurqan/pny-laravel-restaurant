@@ -6,7 +6,17 @@ use Illuminate\Http\Request;
 
 class SettingsController extends Controller
 {
-    function settings() {
+    public function settings() {
         return view('admin/settings');
+    }
+
+    public function add_settings(Request $request) {
+        $request->validate(
+            [
+                'name' => 'required',
+                'email' => 'required',
+                'phone' => 'required'
+            ]
+        );
     }
 }
